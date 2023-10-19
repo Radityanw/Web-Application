@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MASUKIN ANGKA</title>
+</head>
+<body>
+    <h1>JavaScript dapat memvaidasi Input</h1>
+    <p>Input nomor antara 1 dan 10:</p>
+    <input id="numb" type="number">
+    <button type="button" onclick="fungsiku()">Submit</button>
+    <p id="demo"></p>
+    <script>
+    function fungsiku() {
+        var a, text;
+        a = document.getElementById("numb").value;
+
+        if (isNaN(a) || a < 1 || a > 10) {
+            text = "input kamu salah";
+        } else {
+            text = "input kamu benar";
+        }
+        document.getElementById("demo").innerHTML = text;
+        } 
+    </script>
+</body>
+</html>
